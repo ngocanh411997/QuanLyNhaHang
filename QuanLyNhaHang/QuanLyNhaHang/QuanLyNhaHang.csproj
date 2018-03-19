@@ -60,11 +60,29 @@
     <Compile Include="view\Ban.Designer.cs">
       <DependentUpon>Ban.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\BoPhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\BoPhan.Designer.cs">
+      <DependentUpon>BoPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\DangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\KhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="view\KhachHang.Designer.cs">
       <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="view\MonAn.cs">
       <SubType>UserControl</SubType>
@@ -78,6 +96,24 @@
     <Compile Include="view\NhaCungCap.Designer.cs">
       <DependentUpon>NhaCungCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\PhieuYeuCau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\PhieuYeuCau.Designer.cs">
+      <DependentUpon>PhieuYeuCau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\QuanLyChung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\QuanLyChung.Designer.cs">
+      <DependentUpon>QuanLyChung.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -90,14 +126,32 @@
     <EmbeddedResource Include="view\Ban.resx">
       <DependentUpon>Ban.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\BoPhan.resx">
+      <DependentUpon>BoPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\MonAn.resx">
       <DependentUpon>MonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\NhaCungCap.resx">
       <DependentUpon>NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\PhieuYeuCau.resx">
+      <DependentUpon>PhieuYeuCau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\QuanLyChung.resx">
+      <DependentUpon>QuanLyChung.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,1 +1,15 @@
 D:\C#\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe.config
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe.config
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.pdb
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csprojResolveAssemblyReference.cache
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.Properties.Resources.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.Ban.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.DangNhap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.KhachHang.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.Main.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.MonAn.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.NhaCungCap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.Cache
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb
