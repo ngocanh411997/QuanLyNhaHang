@@ -102,6 +102,12 @@
     <Compile Include="view\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\HoaDonNhapKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="view\HoaDonNhapKho.Designer.cs">
+      <DependentUpon>HoaDonNhapKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\PhieuYeuCau.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\HoaDonNhapKho.resx">
+      <DependentUpon>HoaDonNhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PhieuYeuCau.resx">
       <DependentUpon>PhieuYeuCau.cs</DependentUpon>
