@@ -13,3 +13,8 @@ C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.Cache
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.BoPhan.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.NhanVien.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.HoaDonNhapKho.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.PhieuYeuCau.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.QuanLyChung.resources
