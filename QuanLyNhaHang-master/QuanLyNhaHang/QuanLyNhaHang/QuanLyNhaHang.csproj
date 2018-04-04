@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\BoPhanCrt.cs" />
+    <Compile Include="controller\Helper.cs" />
+    <Compile Include="controller\NguoiDungCrt.cs" />
     <Compile Include="controller\NhanVienCrt.cs" />
     <Compile Include="git\frmHoaDonNhap.cs">
       <SubType>Form</SubType>
@@ -54,8 +56,17 @@
     <Compile Include="git\frmHoaDonNhap.Designer.cs">
       <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="git\frmNhomMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="git\frmNhomMonAn.Designer.cs">
+      <DependentUpon>frmNhomMonAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="model\ConnectString.cs" />
     <Compile Include="model\ketnoi.cs" />
+    <Compile Include="model\NguoiDung.cs" />
+    <Compile Include="model\NhanVien.cs" />
+    <Compile Include="model\SingletonData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="view\Ban.cs">
@@ -192,6 +203,9 @@
     </Compile>
     <EmbeddedResource Include="git\frmHoaDonNhap.resx">
       <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="git\frmNhomMonAn.resx">
+      <DependentUpon>frmNhomMonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

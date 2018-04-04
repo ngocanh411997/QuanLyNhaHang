@@ -107,3 +107,35 @@ C:\Users\NgocAnh\Desktop\QuanLyNhaHang-master - Copy\QuanLyNhaHang-master\QuanLy
 C:\Users\NgocAnh\Desktop\QuanLyNhaHang-master - Copy\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.PhieuYeuCau.resources
 C:\Users\NgocAnh\Desktop\QuanLyNhaHang-master - Copy\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.QuanLyChung.resources
 C:\Users\NgocAnh\Desktop\QuanLyNhaHang-master - Copy\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.Cache
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe.config
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.pdb
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csprojResolveAssemblyReference.cache
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.git.frmHoaDonNhap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.Properties.Resources.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.Ban.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.BoPhan.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.DangNhap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmBan.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmBoPhan.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmDangNhap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmHethong.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmKhachHang.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmMain.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmMonAn.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmNhaCungCap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmNhanVien.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmPhieuYC.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmQuanLyChung.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.KhachHang.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.Main.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.MonAn.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.NhaCungCap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.NhanVien.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.HoaDonNhapKho.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.PhieuYeuCau.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.QuanLyChung.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.Cache
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.git.frmNhomMonAn.resources

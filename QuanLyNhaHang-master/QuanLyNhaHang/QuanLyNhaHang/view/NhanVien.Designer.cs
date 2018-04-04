@@ -69,6 +69,8 @@
             this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbTimKiem = new System.Windows.Forms.ComboBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -254,6 +256,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbTimKiem);
             this.groupBox2.Controls.Add(this.txtTimKiem);
             this.groupBox2.Controls.Add(this.btnTimKiem);
             this.groupBox2.Location = new System.Drawing.Point(330, 47);
@@ -265,10 +268,9 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(234, 30);
-            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Location = new System.Drawing.Point(116, 35);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(173, 24);
+            this.txtTimKiem.Size = new System.Drawing.Size(173, 20);
             this.txtTimKiem.TabIndex = 4;
             // 
             // btnTimKiem
@@ -276,13 +278,14 @@
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(131, 30);
+            this.btnTimKiem.Location = new System.Drawing.Point(24, 30);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(86, 26);
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnLamMoi
             // 
@@ -453,6 +456,22 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // cbTimKiem
+            // 
+            this.cbTimKiem.FormattingEnabled = true;
+            this.cbTimKiem.Items.AddRange(new object[] {
+            "Theo Mã",
+            "Theo Tên",
+            "Theo Giới Tính",
+            "Theo Ngày Sinh",
+            "Theo Địa Chỉ",
+            "Theo Bộ Phận",
+            "Theo SĐT"});
+            this.cbTimKiem.Location = new System.Drawing.Point(295, 35);
+            this.cbTimKiem.Name = "cbTimKiem";
+            this.cbTimKiem.Size = new System.Drawing.Size(102, 21);
+            this.cbTimKiem.TabIndex = 5;
+            // 
             // NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,5 +538,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LUONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIENTHOAI;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.ComboBox cbTimKiem;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }

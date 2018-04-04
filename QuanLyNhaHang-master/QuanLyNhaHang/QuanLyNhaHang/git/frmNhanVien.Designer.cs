@@ -32,6 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MABP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -39,6 +48,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbTimKiem = new System.Windows.Forms.ComboBox();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -60,15 +70,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MABP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIENTHOAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -107,6 +108,64 @@
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             this.dgvNhanVien.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvNhanVien_RowPrePaint);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 35;
+            // 
+            // MANV
+            // 
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "Mã Nhân Viên";
+            this.MANV.Name = "MANV";
+            // 
+            // TENNV
+            // 
+            this.TENNV.DataPropertyName = "TENNV";
+            this.TENNV.HeaderText = "Tên Nhân Viên";
+            this.TENNV.Name = "TENNV";
+            // 
+            // GT
+            // 
+            this.GT.DataPropertyName = "GT";
+            this.GT.HeaderText = "Giới Tính";
+            this.GT.Name = "GT";
+            this.GT.Width = 50;
+            // 
+            // NGAYSINH
+            // 
+            this.NGAYSINH.DataPropertyName = "NGAYSINH";
+            this.NGAYSINH.HeaderText = "Ngày Sinh";
+            this.NGAYSINH.Name = "NGAYSINH";
+            this.NGAYSINH.Width = 60;
+            // 
+            // MABP
+            // 
+            this.MABP.DataPropertyName = "TENBP";
+            this.MABP.HeaderText = "Tên Bộ Phận";
+            this.MABP.Name = "MABP";
+            // 
+            // LUONG
+            // 
+            this.LUONG.DataPropertyName = "LUONG";
+            this.LUONG.HeaderText = "Lương";
+            this.LUONG.Name = "LUONG";
+            this.LUONG.Width = 60;
+            // 
+            // DIENTHOAI
+            // 
+            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
+            this.DIENTHOAI.HeaderText = "SĐT";
+            this.DIENTHOAI.Name = "DIENTHOAI";
+            this.DIENTHOAI.Width = 50;
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "DIACHI";
+            this.diachi.HeaderText = "Địa chỉ";
+            this.diachi.Name = "diachi";
             // 
             // groupBox3
             // 
@@ -189,6 +248,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbTimKiem);
             this.groupBox2.Controls.Add(this.btnLamMoi);
             this.groupBox2.Controls.Add(this.txtTimKiem);
             this.groupBox2.Controls.Add(this.btnTimKiem);
@@ -199,13 +259,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm Kiếm";
             // 
+            // cbTimKiem
+            // 
+            this.cbTimKiem.FormattingEnabled = true;
+            this.cbTimKiem.Items.AddRange(new object[] {
+            "Theo Mã",
+            "Theo Tên",
+            "Theo Giới Tính",
+            "Theo Ngày Sinh",
+            "Theo Địa Chỉ",
+            "Theo Bộ Phận",
+            "Theo SĐT",
+            "Tất Cả"});
+            this.cbTimKiem.Location = new System.Drawing.Point(306, 33);
+            this.cbTimKiem.Name = "cbTimKiem";
+            this.cbTimKiem.Size = new System.Drawing.Size(102, 21);
+            this.cbTimKiem.TabIndex = 6;
+            // 
             // btnLamMoi
             // 
             this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLamMoi.Location = new System.Drawing.Point(6, 30);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(86, 25);
+            this.btnLamMoi.Size = new System.Drawing.Size(71, 25);
             this.btnLamMoi.TabIndex = 5;
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -214,10 +291,9 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(234, 30);
-            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Location = new System.Drawing.Point(163, 33);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(173, 24);
+            this.txtTimKiem.Size = new System.Drawing.Size(137, 20);
             this.txtTimKiem.TabIndex = 4;
             // 
             // btnTimKiem
@@ -225,13 +301,14 @@
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(131, 30);
+            this.btnTimKiem.Location = new System.Drawing.Point(83, 29);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(86, 26);
+            this.btnTimKiem.Size = new System.Drawing.Size(74, 26);
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // groupBox1
             // 
@@ -406,64 +483,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Quản Lý Nhân Viên\n";
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 35;
-            // 
-            // MANV
-            // 
-            this.MANV.DataPropertyName = "MANV";
-            this.MANV.HeaderText = "Mã Nhân Viên";
-            this.MANV.Name = "MANV";
-            // 
-            // TENNV
-            // 
-            this.TENNV.DataPropertyName = "TENNV";
-            this.TENNV.HeaderText = "Tên Nhân Viên";
-            this.TENNV.Name = "TENNV";
-            // 
-            // GT
-            // 
-            this.GT.DataPropertyName = "GT";
-            this.GT.HeaderText = "Giới Tính";
-            this.GT.Name = "GT";
-            this.GT.Width = 50;
-            // 
-            // NGAYSINH
-            // 
-            this.NGAYSINH.DataPropertyName = "NGAYSINH";
-            this.NGAYSINH.HeaderText = "Ngày Sinh";
-            this.NGAYSINH.Name = "NGAYSINH";
-            this.NGAYSINH.Width = 60;
-            // 
-            // MABP
-            // 
-            this.MABP.DataPropertyName = "TENBP";
-            this.MABP.HeaderText = "Tên Bộ Phận";
-            this.MABP.Name = "MABP";
-            // 
-            // LUONG
-            // 
-            this.LUONG.DataPropertyName = "LUONG";
-            this.LUONG.HeaderText = "Lương";
-            this.LUONG.Name = "LUONG";
-            this.LUONG.Width = 60;
-            // 
-            // DIENTHOAI
-            // 
-            this.DIENTHOAI.DataPropertyName = "DIENTHOAI";
-            this.DIENTHOAI.HeaderText = "SĐT";
-            this.DIENTHOAI.Name = "DIENTHOAI";
-            this.DIENTHOAI.Width = 50;
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "DIACHI";
-            this.diachi.HeaderText = "Địa chỉ";
-            this.diachi.Name = "diachi";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -536,5 +555,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DIENTHOAI;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cbTimKiem;
     }
 }

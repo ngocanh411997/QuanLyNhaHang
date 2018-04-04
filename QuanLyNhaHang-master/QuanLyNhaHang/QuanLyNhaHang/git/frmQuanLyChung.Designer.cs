@@ -191,6 +191,7 @@
             this.btnNhomMon.Text = "Nhóm Món Ăn";
             this.btnNhomMon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNhomMon.UseVisualStyleBackColor = true;
+            this.btnNhomMon.Click += new System.EventHandler(this.btnNhomMon_Click);
             // 
             // btnMon
             // 

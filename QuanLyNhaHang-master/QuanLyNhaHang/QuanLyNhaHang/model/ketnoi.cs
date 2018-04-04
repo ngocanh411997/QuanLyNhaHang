@@ -66,7 +66,6 @@ namespace QuanLyNhaHang.model
 
             return bangdulieu;
         }
-
         public int xulydulieu(string caulenhsql)
         {
             int kq = 0;

@@ -1,4 +1,5 @@
-﻿using QuanLyNhaHang.model;
+﻿using QuanLyNhaHang.controller;
+using QuanLyNhaHang.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -216,6 +217,18 @@ namespace QuanLyNhaHang.view
                     }
                 }
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            btnLamMoi.Enabled = true;
+            if (txtTimKiem.Text.Trim() == "" || txtTimKiem.Text.Trim().Length > 50)
+            {
+                MessageBox.Show("Lỗi Từ khóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            dgvNhanVien.Refresh();
+            dgvNhanVien.DataSource = NhanVienCrt.TimKiem(cbTimKiem.SelectedIndex, txtTimKiem.Text.Trim());
         }
     }
 }
