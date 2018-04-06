@@ -230,5 +230,6 @@ namespace QuanLyNhaHang.view
             dgvNhanVien.Refresh();
             dgvNhanVien.DataSource = NhanVienCrt.TimKiem(cbTimKiem.SelectedIndex, txtTimKiem.Text.Trim());
         }
+
     }
 }

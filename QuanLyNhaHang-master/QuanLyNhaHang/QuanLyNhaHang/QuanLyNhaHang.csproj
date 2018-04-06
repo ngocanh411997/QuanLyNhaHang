@@ -50,16 +50,16 @@
     <Compile Include="controller\Helper.cs" />
     <Compile Include="controller\NguoiDungCrt.cs" />
     <Compile Include="controller\NhanVienCrt.cs" />
-    <Compile Include="git\frmHoaDonNhap.cs">
+    <Compile Include="View\frmHoaDonNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmHoaDonNhap.Designer.cs">
+    <Compile Include="View\frmHoaDonNhap.Designer.cs">
       <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmNhomMonAn.cs">
+    <Compile Include="View\frmNhomMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmNhomMonAn.Designer.cs">
+    <Compile Include="View\frmNhomMonAn.Designer.cs">
       <DependentUpon>frmNhomMonAn.cs</DependentUpon>
     </Compile>
     <Compile Include="model\ConnectString.cs" />
@@ -69,142 +69,76 @@
     <Compile Include="model\SingletonData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\Ban.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\Ban.Designer.cs">
-      <DependentUpon>Ban.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\BoPhan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\BoPhan.Designer.cs">
-      <DependentUpon>BoPhan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\DangNhap.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\DangNhap.Designer.cs">
-      <DependentUpon>DangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="git\frmBan.cs">
+    <Compile Include="View\frmBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmBan.Designer.cs">
+    <Compile Include="View\frmBan.Designer.cs">
       <DependentUpon>frmBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmBoPhan.cs">
+    <Compile Include="View\frmBoPhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmBoPhan.Designer.cs">
+    <Compile Include="View\frmBoPhan.Designer.cs">
       <DependentUpon>frmBoPhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmDangNhap.cs">
+    <Compile Include="View\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmDangNhap.Designer.cs">
+    <Compile Include="View\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmHethong.cs">
+    <Compile Include="View\frmHethong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmHethong.Designer.cs">
+    <Compile Include="View\frmHethong.Designer.cs">
       <DependentUpon>frmHethong.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmKhachHang.cs">
+    <Compile Include="View\frmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmKhachHang.Designer.cs">
+    <Compile Include="View\frmKhachHang.Designer.cs">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmMain.cs">
+    <Compile Include="View\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmMain.Designer.cs">
+    <Compile Include="View\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmMonAn.cs">
+    <Compile Include="View\frmMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmMonAn.Designer.cs">
+    <Compile Include="View\frmMonAn.Designer.cs">
       <DependentUpon>frmMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmNhaCungCap.cs">
+    <Compile Include="View\frmNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmNhaCungCap.Designer.cs">
+    <Compile Include="View\frmNhaCungCap.Designer.cs">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmNhanVien.cs">
+    <Compile Include="View\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmNhanVien.Designer.cs">
+    <Compile Include="View\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmPhieuYC.cs">
+    <Compile Include="View\frmPhieuYC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmPhieuYC.Designer.cs">
+    <Compile Include="View\frmPhieuYC.Designer.cs">
       <DependentUpon>frmPhieuYC.cs</DependentUpon>
     </Compile>
-    <Compile Include="git\frmQuanLyChung.cs">
+    <Compile Include="View\frmQuanLyChung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="git\frmQuanLyChung.Designer.cs">
+    <Compile Include="View\frmQuanLyChung.Designer.cs">
       <DependentUpon>frmQuanLyChung.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\KhachHang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\KhachHang.Designer.cs">
-      <DependentUpon>KhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\Main.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\MonAn.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\MonAn.Designer.cs">
-      <DependentUpon>MonAn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\NhaCungCap.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\NhaCungCap.Designer.cs">
-      <DependentUpon>NhaCungCap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\NhanVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\HoaDonNhapKho.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\HoaDonNhapKho.Designer.cs">
-      <DependentUpon>HoaDonNhapKho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\PhieuYeuCau.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\PhieuYeuCau.Designer.cs">
-      <DependentUpon>PhieuYeuCau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\QuanLyChung.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="view\QuanLyChung.Designer.cs">
-      <DependentUpon>QuanLyChung.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="git\frmHoaDonNhap.resx">
+    <EmbeddedResource Include="View\frmHoaDonNhap.resx">
       <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmNhomMonAn.resx">
+    <EmbeddedResource Include="View\frmNhomMonAn.resx">
       <DependentUpon>frmNhomMonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -216,71 +150,38 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\Ban.resx">
-      <DependentUpon>Ban.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\BoPhan.resx">
-      <DependentUpon>BoPhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\DangNhap.resx">
-      <DependentUpon>DangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="git\frmBan.resx">
+    <EmbeddedResource Include="View\frmBan.resx">
       <DependentUpon>frmBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmBoPhan.resx">
+    <EmbeddedResource Include="View\frmBoPhan.resx">
       <DependentUpon>frmBoPhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmDangNhap.resx">
+    <EmbeddedResource Include="View\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmHethong.resx">
+    <EmbeddedResource Include="View\frmHethong.resx">
       <DependentUpon>frmHethong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmKhachHang.resx">
+    <EmbeddedResource Include="View\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmMain.resx">
+    <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmMonAn.resx">
+    <EmbeddedResource Include="View\frmMonAn.resx">
       <DependentUpon>frmMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmNhaCungCap.resx">
+    <EmbeddedResource Include="View\frmNhaCungCap.resx">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmNhanVien.resx">
+    <EmbeddedResource Include="View\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmPhieuYC.resx">
+    <EmbeddedResource Include="View\frmPhieuYC.resx">
       <DependentUpon>frmPhieuYC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="git\frmQuanLyChung.resx">
+    <EmbeddedResource Include="View\frmQuanLyChung.resx">
       <DependentUpon>frmQuanLyChung.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\KhachHang.resx">
-      <DependentUpon>KhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\MonAn.resx">
-      <DependentUpon>MonAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\NhaCungCap.resx">
-      <DependentUpon>NhaCungCap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\NhanVien.resx">
-      <DependentUpon>NhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\HoaDonNhapKho.resx">
-      <DependentUpon>HoaDonNhapKho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\PhieuYeuCau.resx">
-      <DependentUpon>PhieuYeuCau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\QuanLyChung.resx">
-      <DependentUpon>QuanLyChung.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
