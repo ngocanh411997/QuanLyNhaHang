@@ -84,7 +84,9 @@ namespace QuanLyNhaHang.view
 
         private void button1_Click(object sender, EventArgs e)
         {
+            frmMain Main = new frmMain();
             this.Close();
+            Main.ShowDialog();
         }
 
         private void btnNhomMon_Click(object sender, EventArgs e)
@@ -92,7 +94,7 @@ namespace QuanLyNhaHang.view
             frmNhomMonAn NhomMon = new frmNhomMonAn();
             this.Hide();
             NhomMon.ShowDialog();
-            this.Show();
+            
         }
     }
 }

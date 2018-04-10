@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyNhaHang.git;
+using QuanLyNhaHang.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace QuanLyNhaHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new view.frmDangNhap());
+            Application.Run(new frmMain());
         }
     }
 }

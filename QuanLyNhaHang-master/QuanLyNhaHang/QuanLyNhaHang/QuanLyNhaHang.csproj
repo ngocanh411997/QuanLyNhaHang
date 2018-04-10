@@ -46,99 +46,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\MonAnBUS.cs" />
+    <Compile Include="BUS\NhomMonAnBUS.cs" />
     <Compile Include="controller\BoPhanCrt.cs" />
     <Compile Include="controller\Helper.cs" />
+    <Compile Include="controller\MonAnController.cs" />
     <Compile Include="controller\NguoiDungCrt.cs" />
     <Compile Include="controller\NhanVienCrt.cs" />
-    <Compile Include="View\frmHoaDonNhap.cs">
+    <Compile Include="controller\NhomMonAnController.cs" />
+    <Compile Include="Model\Helper.cs" />
+    <Compile Include="Model\KetNoi_A.cs" />
+    <Compile Include="Model\MonAn.cs" />
+    <Compile Include="Model\NhomMonAn.cs" />
+    <Compile Include="view\frmHoaDonNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmHoaDonNhap.Designer.cs">
+    <Compile Include="view\frmHoaDonNhap.Designer.cs">
       <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmNhomMonAn.cs">
+    <Compile Include="view\frmNhomMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmNhomMonAn.Designer.cs">
+    <Compile Include="view\frmNhomMonAn.Designer.cs">
       <DependentUpon>frmNhomMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\ConnectString.cs" />
-    <Compile Include="model\ketnoi.cs" />
-    <Compile Include="model\NguoiDung.cs" />
-    <Compile Include="model\NhanVien.cs" />
-    <Compile Include="model\SingletonData.cs" />
+    <Compile Include="Model\ConnectString.cs" />
+    <Compile Include="Model\ketnoi.cs" />
+    <Compile Include="Model\NguoiDung.cs" />
+    <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\SingletonData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\frmBan.cs">
+    <Compile Include="view\frmBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmBan.Designer.cs">
+    <Compile Include="view\frmBan.Designer.cs">
       <DependentUpon>frmBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmBoPhan.cs">
+    <Compile Include="view\frmBoPhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmBoPhan.Designer.cs">
+    <Compile Include="view\frmBoPhan.Designer.cs">
       <DependentUpon>frmBoPhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmDangNhap.cs">
+    <Compile Include="view\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmDangNhap.Designer.cs">
+    <Compile Include="view\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmHethong.cs">
+    <Compile Include="view\frmHethong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmHethong.Designer.cs">
+    <Compile Include="view\frmHethong.Designer.cs">
       <DependentUpon>frmHethong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmKhachHang.cs">
+    <Compile Include="view\frmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmKhachHang.Designer.cs">
+    <Compile Include="view\frmKhachHang.Designer.cs">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmMain.cs">
+    <Compile Include="view\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmMain.Designer.cs">
+    <Compile Include="view\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmMonAn.cs">
+    <Compile Include="view\frmMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmMonAn.Designer.cs">
+    <Compile Include="view\frmMonAn.Designer.cs">
       <DependentUpon>frmMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmNhaCungCap.cs">
+    <Compile Include="view\frmNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmNhaCungCap.Designer.cs">
+    <Compile Include="view\frmNhaCungCap.Designer.cs">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmNhanVien.cs">
+    <Compile Include="view\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmNhanVien.Designer.cs">
+    <Compile Include="view\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmPhieuYC.cs">
+    <Compile Include="view\frmPhieuYC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmPhieuYC.Designer.cs">
+    <Compile Include="view\frmPhieuYC.Designer.cs">
       <DependentUpon>frmPhieuYC.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmQuanLyChung.cs">
+    <Compile Include="view\frmQuanLyChung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmQuanLyChung.Designer.cs">
+    <Compile Include="view\frmQuanLyChung.Designer.cs">
       <DependentUpon>frmQuanLyChung.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmHoaDonNhap.resx">
+    <EmbeddedResource Include="view\frmHoaDonNhap.resx">
       <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmNhomMonAn.resx">
+    <EmbeddedResource Include="view\frmNhomMonAn.resx">
       <DependentUpon>frmNhomMonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -150,37 +158,37 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmBan.resx">
+    <EmbeddedResource Include="view\frmBan.resx">
       <DependentUpon>frmBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmBoPhan.resx">
+    <EmbeddedResource Include="view\frmBoPhan.resx">
       <DependentUpon>frmBoPhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmDangNhap.resx">
+    <EmbeddedResource Include="view\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmHethong.resx">
+    <EmbeddedResource Include="view\frmHethong.resx">
       <DependentUpon>frmHethong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmKhachHang.resx">
+    <EmbeddedResource Include="view\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMain.resx">
+    <EmbeddedResource Include="view\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMonAn.resx">
+    <EmbeddedResource Include="view\frmMonAn.resx">
       <DependentUpon>frmMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmNhaCungCap.resx">
+    <EmbeddedResource Include="view\frmNhaCungCap.resx">
       <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmNhanVien.resx">
+    <EmbeddedResource Include="view\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmPhieuYC.resx">
+    <EmbeddedResource Include="view\frmPhieuYC.resx">
       <DependentUpon>frmPhieuYC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmQuanLyChung.resx">
+    <EmbeddedResource Include="view\frmQuanLyChung.resx">
       <DependentUpon>frmQuanLyChung.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

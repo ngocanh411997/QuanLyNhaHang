@@ -67,12 +67,12 @@ namespace QuanLyNhaHang.view
 
         private void quảnLýNhânViênToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            ThemTab(NhanVien.nv, 4, "Quản lý nhân viên");
+            //ThemTab(NhanVien.nv, 4, "Quản lý nhân viên");
         }
 
         private void quảnLýPhòngBanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThemTab(BoPhan.bp, 4, "Quản lý bộ phận");
+           // ThemTab(BoPhan.bp, 4, "Quản lý bộ phận");
         }
     }
 }

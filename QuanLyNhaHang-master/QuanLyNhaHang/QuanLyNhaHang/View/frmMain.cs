@@ -30,9 +30,8 @@ namespace QuanLyNhaHang.view
         private void quảnLýChungToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanLyChung QuanLyChung = new frmQuanLyChung();
-            this.Hide();
             QuanLyChung.ShowDialog();
-            this.Show();
+            this.Hide();
         }
     }
 }
