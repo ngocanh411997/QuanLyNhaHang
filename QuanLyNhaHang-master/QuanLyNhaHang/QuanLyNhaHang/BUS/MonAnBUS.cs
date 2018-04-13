@@ -32,5 +32,13 @@ namespace QuanLyNhaHang.BUS
         {
             return da.TangMa();
         }
+        public DataTable GetListNhomMon()
+        {
+            return da.GetListNhomMon();
+        }
+        public DataTable TimKiemMA(string strTimKiem)
+        {
+            return da.TimKiemMA(strTimKiem);
+        }
     }
 }

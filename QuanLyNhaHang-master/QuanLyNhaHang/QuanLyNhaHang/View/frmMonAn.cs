@@ -21,6 +21,15 @@ namespace QuanLyNhaHang.view
         {
             InitializeComponent();
         }
+        public void ShowNhomMon()
+        {
+            DataTable dt = new DataTable();
+            dt = Bus.GetListNhomMon();
+            cbMaNhomMon.DataSource = dt;
+            cbMaNhomMon.DisplayMember = "TENNHOMMON";
+            cbMaNhomMon.ValueMember = "MANHOMMON";
+
+        }
         private void DisEnl(bool e)
         {
             btnThem.Enabled = !e;
@@ -67,6 +76,7 @@ namespace QuanLyNhaHang.view
         {
             HienThi();
             DisEnl(false);
+            ShowNhomMon();
         }
 
         private void dgvMonAn_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -75,7 +85,7 @@ namespace QuanLyNhaHang.view
             {
                 txtTenMon.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["TENMON"].Value);
                 txtGia.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["GIA"].Value);
-                cbMaNhomMon.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["MaNHOMMON"].Value);
+                cbMaNhomMon.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["TENNHOMMON"].Value);
                 cbDonViTinh.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["DONVITINH"].Value);
             }
             else
@@ -83,7 +93,7 @@ namespace QuanLyNhaHang.view
                 txtMaMon.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["MAMON"].Value);
                 txtTenMon.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["TENMON"].Value);
                 txtGia.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["GIA"].Value);
-                cbMaNhomMon.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["MaNHOMMON"].Value);
+                cbMaNhomMon.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["TENNHOMMON"].Value);
                 cbDonViTinh.Text = Convert.ToString(dgvMonAn.CurrentRow.Cells["DONVITINH"].Value);
             }
         }
@@ -156,7 +166,7 @@ namespace QuanLyNhaHang.view
             obj.TenMon = txtTenMon.Text;
             obj.Gia = _gia;
             obj.DonViTinh = cbDonViTinh.Text;
-            obj.MaNhomMon = cbMaNhomMon.Text;
+            obj.MaNhomMon = cbMaNhomMon.SelectedValue.ToString();
 
             if (txtMaMon.Text != "" && txtTenMon.Text != "" && txtGia.Text != "" && cbMaNhomMon.Text != "" && cbDonViTinh.Text != "" && fluu == 0)
             {
@@ -170,9 +180,9 @@ namespace QuanLyNhaHang.view
                     DisEnl(false);
                     fluu = 1;
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
             else if (txtMaMon.Text != "" && txtTenMon.Text != "" && txtGia.Text != "" && cbMaNhomMon.Text != "" && cbDonViTinh.Text != "" && fluu != 0)
@@ -186,9 +196,9 @@ namespace QuanLyNhaHang.view
                     clearData();
                     DisEnl(false);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi");
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
         }
@@ -219,19 +229,25 @@ namespace QuanLyNhaHang.view
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            try
+            if (cbTimKiem.Text == "Mã Món Ăn")
             {
-                if (txtTimKiem.Text.Trim() == "" || txtTimKiem.Text.Trim().Length > 50)
-                {
-                    MessageBox.Show("Lỗi Từ khóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                dgvMonAn.Refresh();
-                dgvMonAn.DataSource = controller.MonAnController.TimKiem(cbTimKiem.SelectedIndex, txtTimKiem.Text.Trim());
+                dgvMonAn.DataSource = Bus.TimKiemMA("SELECT MAMON,TENNHOMMON,TENMON,DONVITINH,GIA FROM dbo.MONAN INNER JOIN dbo.NHOMMONAN ON NHOMMONAN.MANHOMMON = MONAN.MANHOMMON AND MAMON like '%" + txtTimKiem.Text.Trim() + "%'");
             }
-            catch (Exception ex)
+            if (cbTimKiem.Text == "Tên Món Ăn")
             {
-                MessageBox.Show("Lỗi" + ex.Message);
+                dgvMonAn.DataSource = Bus.TimKiemMA("SELECT MAMON,TENNHOMMON,TENMON,DONVITINH,GIA FROM dbo.MONAN INNER JOIN dbo.NHOMMONAN ON NHOMMONAN.MANHOMMON = MONAN.MANHOMMON AND TENMON like N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cbTimKiem.Text == "Nhóm Món ")
+            {
+                dgvMonAn.DataSource = Bus.TimKiemMA("SELECT MAMON,TENNHOMMON,TENMON,DONVITINH,GIA FROM dbo.MONAN INNER JOIN dbo.NHOMMONAN ON NHOMMONAN.MANHOMMON = MONAN.MANHOMMON AND TENNHOMMON like N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cbTimKiem.Text == "Đơn Vị Tính")
+            {
+                dgvMonAn.DataSource = Bus.TimKiemMA("SELECT MAMON,TENNHOMMON,TENMON,DONVITINH,GIA FROM dbo.MONAN INNER JOIN dbo.NHOMMONAN ON NHOMMONAN.MANHOMMON = MONAN.MANHOMMON AND DONVITINH like N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cbTimKiem.Text == "Giá")
+            {
+                dgvMonAn.DataSource = Bus.TimKiemMA("SELECT MAMON,TENNHOMMON,TENMON,DONVITINH,GIA FROM dbo.MONAN INNER JOIN dbo.NHOMMONAN ON NHOMMONAN.MANHOMMON = MONAN.MANHOMMON AND GIA like '%" + txtTimKiem.Text.Trim() + "%'");
             }
         }
     }

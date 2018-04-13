@@ -190,13 +190,14 @@ namespace QuanLyNhaHang.git
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (txtTimKiem.Text.Trim() == "" || txtTimKiem.Text.Trim().Length > 50)
+            if (cbTimKiem.Text == "Theo Mã")
             {
-                MessageBox.Show("Lỗi Từ khóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                dgvNhomMonAn.DataSource = Bus.TimKiemNM("SELECT * from NHOMMONAN WHERE MANHOMMON like '%" + txtTimKiem.Text.Trim() + "%'");
             }
-            dgvNhomMonAn.Refresh();
-            dgvNhomMonAn.DataSource = controller.NhomMonAnController.TimKiem(cbTimKiem.SelectedIndex, txtTimKiem.Text.Trim());
+            if (cbTimKiem.Text == "Theo Tên")
+            {
+                dgvNhomMonAn.DataSource = Bus.TimKiemNM("SELECT * from NHOMMONAN WHERE TENNHOMMON like N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
         }
     }
 }

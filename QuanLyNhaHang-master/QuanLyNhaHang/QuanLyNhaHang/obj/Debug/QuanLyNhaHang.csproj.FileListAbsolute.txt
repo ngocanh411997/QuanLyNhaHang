@@ -118,7 +118,6 @@ C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHa
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmBan.resources
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmBoPhan.resources
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmDangNhap.resources
-C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmHethong.resources
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmKhachHang.resources
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmMain.resources
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmMonAn.resources
@@ -128,3 +127,4 @@ C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHa
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmQuanLyChung.resources
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.Cache
 C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.git.frmNhomMonAn.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyNhaHang\QuanLyNhaHang-master\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.view.frmThanhToan.resources

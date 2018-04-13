@@ -47,21 +47,9 @@ namespace QuanLyNhaHang.controller
         {
             return conn.TangMa("Select * From NhomMonAn", "MN");
         }
-        public static List<NhomMonAn> TimKiem(int type, string TuKhoa)
+        public DataTable TimKiemNM(string strTimKiem)
         {
-            string query = "";
-            KetNoi_A conn = new KetNoi_A();
-            switch (type)
-            {
-                case 0:
-                    query = string.Format("SELECT * FROM dbo.NhomMonAn WHERE MANHOMMON LIKE '%{0}%'", TuKhoa);
-                    return Helper.ToListof<NhomMonAn>(conn.GetDataStr(query));
-                case 1:
-
-                    query = string.Format("SELECT * FROM dbo.NhomMonAn WHERE TENNHOMMON LIKE N'%{0}%'", TuKhoa);
-                    return Helper.ToListof<NhomMonAn>(conn.GetDataStr(query));
-            }
-            return Helper.ToListof<NhomMonAn>(conn.GetDataStr(" SELECT * from dbo.NhomMonAn"));
+            return conn.GetDataStr(strTimKiem);
         }
     }
 }

@@ -48,7 +48,7 @@
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MANHOMMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENNHOMMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONVITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -99,7 +99,7 @@
             this.cbTimKiem.Items.AddRange(new object[] {
             "Mã Món Ăn",
             "Tên Món Ăn",
-            "Mã Nhóm Món ",
+            "Nhóm Món ",
             "Đơn Vị Tính",
             "Giá"});
             this.cbTimKiem.Location = new System.Drawing.Point(510, 28);
@@ -265,7 +265,7 @@
             this.STT,
             this.MAMON,
             this.TENMON,
-            this.MANHOMMON,
+            this.TENNHOMMON,
             this.DONVITINH,
             this.GIA});
             this.dgvMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -293,11 +293,11 @@
             this.TENMON.HeaderText = "Tên Món Ăn";
             this.TENMON.Name = "TENMON";
             // 
-            // MANHOMMON
+            // TENNHOMMON
             // 
-            this.MANHOMMON.DataPropertyName = "MANHOMMON";
-            this.MANHOMMON.HeaderText = "Mã Nhóm Món Ăn";
-            this.MANHOMMON.Name = "MANHOMMON";
+            this.TENNHOMMON.DataPropertyName = "TENNHOMMON";
+            this.TENNHOMMON.HeaderText = "Nhóm Món Ăn";
+            this.TENNHOMMON.Name = "TENNHOMMON";
             // 
             // DONVITINH
             // 
@@ -396,9 +396,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(22, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Mã Nhóm Món Ăn";
+            this.label4.Text = "Nhóm Món Ăn";
             // 
             // label3
             // 
@@ -468,12 +468,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvMonAn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAMON;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TENMON;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MANHOMMON;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DONVITINH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIA;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbDonViTinh;
         private System.Windows.Forms.ComboBox cbMaNhomMon;
@@ -491,5 +485,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnLamTrong;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAMON;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENMON;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENNHOMMON;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DONVITINH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIA;
     }
 }
