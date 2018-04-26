@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDTNgay = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DOANHTHU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvDTThang = new System.Windows.Forms.DataGridView();
             this._STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._NGAYNHAP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._DOANHTHU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvDTNam = new System.Windows.Forms.DataGridView();
             this._SoTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doanh_thu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDTNgay)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDTThang)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDTNam)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,18 +66,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Theo dõi doanh thu nhà hàng";
             // 
-            // dataGridView1
+            // dgvDTNgay
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDTNgay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDTNgay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.NGAYNHAP,
             this.DOANHTHU});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(342, 294);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvDTNgay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDTNgay.Location = new System.Drawing.Point(3, 16);
+            this.dgvDTNgay.Name = "dgvDTNgay";
+            this.dgvDTNgay.Size = new System.Drawing.Size(342, 294);
+            this.dgvDTNgay.TabIndex = 1;
             // 
             // STT
             // 
@@ -93,14 +93,14 @@
             // DOANHTHU
             // 
             this.DOANHTHU.DataPropertyName = "DOANHTHU";
-            dataGridViewCellStyle1.Format = "0,000";
-            this.DOANHTHU.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "0,000";
+            this.DOANHTHU.DefaultCellStyle = dataGridViewCellStyle7;
             this.DOANHTHU.HeaderText = "Doanh thu";
             this.DOANHTHU.Name = "DOANHTHU";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvDTNgay);
             this.groupBox1.Location = new System.Drawing.Point(18, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(348, 313);
@@ -110,7 +110,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Controls.Add(this.dgvDTThang);
             this.groupBox2.Location = new System.Drawing.Point(372, 56);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(346, 165);
@@ -118,18 +118,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Theo Tháng";
             // 
-            // dataGridView2
+            // dgvDTThang
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDTThang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDTThang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this._STT,
             this._NGAYNHAP,
             this._DOANHTHU});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(340, 146);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvDTThang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDTThang.Location = new System.Drawing.Point(3, 16);
+            this.dgvDTThang.Name = "dgvDTThang";
+            this.dgvDTThang.Size = new System.Drawing.Size(340, 146);
+            this.dgvDTThang.TabIndex = 0;
             // 
             // _STT
             // 
@@ -145,14 +145,14 @@
             // _DOANHTHU
             // 
             this._DOANHTHU.DataPropertyName = "DOANHTHU";
-            dataGridViewCellStyle2.Format = "0,000";
-            this._DOANHTHU.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Format = "0,000";
+            this._DOANHTHU.DefaultCellStyle = dataGridViewCellStyle8;
             this._DOANHTHU.HeaderText = "Doanh thu";
             this._DOANHTHU.Name = "_DOANHTHU";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView3);
+            this.groupBox3.Controls.Add(this.dgvDTNam);
             this.groupBox3.Location = new System.Drawing.Point(375, 227);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(346, 142);
@@ -160,18 +160,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Theo Năm";
             // 
-            // dataGridView3
+            // dgvDTNam
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDTNam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDTNam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this._SoTT,
             this.Nam,
             this.doanh_thu});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(340, 123);
-            this.dataGridView3.TabIndex = 0;
+            this.dgvDTNam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDTNam.Location = new System.Drawing.Point(3, 16);
+            this.dgvDTNam.Name = "dgvDTNam";
+            this.dgvDTNam.Size = new System.Drawing.Size(340, 123);
+            this.dgvDTNam.TabIndex = 0;
             // 
             // _SoTT
             // 
@@ -187,8 +187,8 @@
             // doanh_thu
             // 
             this.doanh_thu.DataPropertyName = "DOANHTHU";
-            dataGridViewCellStyle3.Format = "0,000";
-            this.doanh_thu.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "0,000";
+            this.doanh_thu.DefaultCellStyle = dataGridViewCellStyle9;
             this.doanh_thu.HeaderText = "Doanh thu";
             this.doanh_thu.Name = "doanh_thu";
             // 
@@ -196,19 +196,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 473);
+            this.ClientSize = new System.Drawing.Size(729, 519);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmDoanhThu";
             this.Text = "frmDoanhThu";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmDoanhThu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDTNgay)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDTThang)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDTNam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,18 +218,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDTNgay;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYNHAP;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOANHTHU;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvDTThang;
         private System.Windows.Forms.DataGridViewTextBoxColumn _STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn _NGAYNHAP;
         private System.Windows.Forms.DataGridViewTextBoxColumn _DOANHTHU;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvDTNam;
         private System.Windows.Forms.DataGridViewTextBoxColumn _SoTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
         private System.Windows.Forms.DataGridViewTextBoxColumn doanh_thu;

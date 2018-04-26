@@ -13,13 +13,22 @@ namespace QuanLyNhaHang.view
 {
     public partial class frmDoanhThu : Form
     {
-        ChiTietPhieuYeuCau obj = new ChiTietPhieuYeuCau();
+        PhieuYeuCau obj = new PhieuYeuCau();
+        ChiTietPhieuYeuCau CT = new ChiTietPhieuYeuCau();
         PhieuYeuCauBUS Bus = new PhieuYeuCauBUS();
         public frmDoanhThu()
         {
             InitializeComponent();
         }
+        private void HienThiNgay()
+        {
+            dgvDTNgay.DataSource = Bus.DTNgay();
+            dgvDTThang.AutoResizeColumns();
+        }
 
-        
+        private void frmDoanhThu_Load(object sender, EventArgs e)
+        {
+            HienThiNgay();
+        }
     }
 }
