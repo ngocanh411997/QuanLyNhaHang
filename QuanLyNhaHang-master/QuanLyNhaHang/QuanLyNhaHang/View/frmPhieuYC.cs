@@ -1,4 +1,5 @@
 ﻿using QuanLyNhaHang.BUS;
+using QuanLyNhaHang.Helper;
 using QuanLyNhaHang.Model;
 using System;
 using System.Collections.Generic;
@@ -17,19 +18,18 @@ namespace QuanLyNhaHang.view
         PhieuYeuCau obj = new PhieuYeuCau();
         ChiTietPhieuYeuCau CT = new ChiTietPhieuYeuCau();
         PhieuYeuCauBUS Bus = new PhieuYeuCauBUS();
-        private int fluu = 1;
+        private int fluu=1;
         public frmPhieuYC()
         {
             InitializeComponent();
-        }
-        public void ShowMonAn()
+        }       
+        public void ShowNV()
         {
             DataTable dt = new DataTable();
-            dt = Bus.GetListMonAn();
-            cbMonAn.DataSource = dt;
-            cbMonAn.DisplayMember = "TENMON";
-            cbMonAn.ValueMember = "MAMON";
-
+            dt = Bus.GetListNV();
+            cbMaNV.DataSource = dt;
+            cbMaNV.DisplayMember = "MANV";
+            cbMaNV.ValueMember = "MANV";
         }
         private void DisEnl(bool e)
         {
@@ -40,38 +40,27 @@ namespace QuanLyNhaHang.view
             btnHuy.Enabled = e;
             txtMaPhieu.Enabled = e;
             txtMaKH.Enabled = e;
-            txtMaNV.Enabled = e;
+            cbMaNV.Enabled = e;
             dtNgayNhap.Enabled = e;           
-        }
-        private void DisEnlCT(bool e)
-        {
-            btnThemCT.Enabled = !e;
-            btnXoaCT.Enabled = !e;
-            btnSuaCT.Enabled = !e;
-            btnLuuCT.Enabled = e;
-            btnHuy.Enabled = e;
-            txt_MaPhieu.Enabled = e;
-            cbMonAn.Enabled = e;
-            txtSoLuong.Enabled = e;    
         }
         private void clearData()
         {
             txtMaPhieu.Text = "";
             txtMaKH.Text = "";
-            txtMaNV.Text = "";
+            cbMaNV.Text = "";
         }
         private void HienThi()
         {
             dgvPhieuYeuCau.DataSource = Bus.GetDataProc();
+            dgvPhieuYeuCau.AutoResizeColumns();
+            ShowNV();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
-            {
-                frmQuanLyChung QL = new frmQuanLyChung();
-                QL.Show();
+            {               
                 this.Close();
             }
             else
@@ -81,11 +70,7 @@ namespace QuanLyNhaHang.view
         private void frmPhieuYC_Load(object sender, EventArgs e)
         {
             HienThi();
-            DisEnl(false);
-            DisEnlCT(false);
-            ShowMonAn();
-            txt_MaPhieu.Enabled = false;
-            btnThanhToan.Enabled = false;
+            DisEnl(false);                          
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -132,22 +117,25 @@ namespace QuanLyNhaHang.view
             {
                 MessageBox.Show("Bạn chưa nhập khách hàng! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtMaNV.Text == "")
+            if (cbMaNV.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập nhân viên! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            //if (dtNgayNhap.Value != DateTime.Now)
+            //{
+            //    MessageBox.Show("Bạn nhập sai ngày! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
 
             obj.MAPHIEU = txtMaPhieu.Text;
             obj.MAKH = txtMaKH.Text;
-            obj.MANV = txtMaNV.Text;
+            obj.MANV = cbMaNV.Text;
             obj.NGAYNHAP = dtNgayNhap.Value;
-
-
-            if (txtMaPhieu.Text != "" && txtMaKH.Text != ""&& txtMaNV.Text != "" && fluu == 0)
+            if (txtMaPhieu.Text != "" && txtMaKH.Text != ""&& cbMaNV.Text != "" && fluu == 0)
             {
                 try
                 {
+
                     Bus.InsertData(obj);
                     MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     HienThi();
@@ -161,10 +149,10 @@ namespace QuanLyNhaHang.view
 
                 }
             }
-            else if (txtMaPhieu.Text != "" && txtMaKH.Text != "" && txtMaNV.Text != "" && fluu != 0)
+            else if (txtMaPhieu.Text != "" && txtMaKH.Text != "" && cbMaNV.Text != "" && fluu != 0)
             {
                 try
-                {
+                {                    
                     Bus.UpdateData(obj);
                     MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     HienThi();
@@ -177,6 +165,7 @@ namespace QuanLyNhaHang.view
                     MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
+            
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -185,8 +174,7 @@ namespace QuanLyNhaHang.view
             if (dr == DialogResult.Yes)
             {
                 HienThi();
-                DisEnl(false);
-                DisEnlCT(false);
+                DisEnl(false);             
                 fluu = 1;
 
             }
@@ -204,15 +192,14 @@ namespace QuanLyNhaHang.view
             if (fluu == 0)
             {
                 txtMaKH.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MAKH"].Value);
-                txtMaNV.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MANV"].Value);
-                dtNgayNhap.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["NGAYNHAP"].Value);
+                cbMaNV.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MANV"].Value);
+                dtNgayNhap.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["NGAYNHAP"].Value);             
             }
             else if(fluu !=0 && fluu!=-1)
             {
-                txtMaPhieu.Text= Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MAPHIEU"].Value);
-                txt_MaPhieu.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MAPHIEU"].Value);
+                txtMaPhieu.Text= Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MAPHIEU"].Value);            
                 txtMaKH.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MAKH"].Value);
-                txtMaNV.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MANV"].Value);
+                cbMaNV.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["MANV"].Value);
                 dtNgayNhap.Text = Convert.ToString(dgvPhieuYeuCau.CurrentRow.Cells["NGAYNHAP"].Value);
             }
         }
@@ -230,140 +217,62 @@ namespace QuanLyNhaHang.view
         {
             if (cbTimKiem.Text == "Mã Phiếu")
             {
-                dgvPhieuYeuCau.DataSource = Bus.TimKiemPYC("SELECT * from PHIEUYEUCAU WHERE MAPHIEU like '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvPhieuYeuCau.DataSource = Bus.TimKiemPYC("SELECT MAPHIEU,KHACHHANG.MAKH,TENKH,MANV,NGAYNHAP,TRANGTHAI FROM dbo.PHIEUYC INNER JOIN dbo.KHACHHANG ON KHACHHANG.MAKH = PHIEUYC.MAKH WHERE MAPHIEU like '%" + txtTimKiem.Text.Trim() + "%' and TRANGTHAI=N'Chưa thanh toán' ");
             }
             if (cbTimKiem.Text == "Khách Hàng")
             {
-                dgvPhieuYeuCau.DataSource = Bus.TimKiemPYC("SELECT * from PHIEUYEUCAU WHERE MAKH like '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvPhieuYeuCau.DataSource = Bus.TimKiemPYC("SELECT MAPHIEU,KHACHHANG.MAKH,TENKH,MANV,NGAYNHAP,TRANGTHAI FROM dbo.PHIEUYC INNER JOIN dbo.KHACHHANG ON KHACHHANG.MAKH = PHIEUYC.MAKH WHERE TENKH like N'%" + txtTimKiem.Text.Trim() + "%' and TRANGTHAI=N'Chưa thanh toán' ");
             }
             if (cbTimKiem.Text == "Nhân Viên")
             {
-                dgvPhieuYeuCau.DataSource = Bus.TimKiemPYC("SELECT * from PHIEUYEUCAU WHERE MANV like '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvPhieuYeuCau.DataSource = Bus.TimKiemPYC("SELECT MAPHIEU,KHACHHANG.MAKH,TENKH,MANV,NGAYNHAP,TRANGTHAI FROM dbo.PHIEUYC INNER JOIN dbo.KHACHHANG ON KHACHHANG.MAKH = PHIEUYC.MAKH WHERE MANV like '%" + txtTimKiem.Text.Trim() + "%' and TRANGTHAI=N'Chưa thanh toán' ");
             }
             if (cbTimKiem.Text == "Ngày Nhập")
             {
-                dgvPhieuYeuCau.DataSource = Bus.TimKiemPYC("SELECT * from PHIEUYEUCAU WHERE NGAYNHAP like '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvPhieuYeuCau.DataSource = Bus.TimKiemPYC("SELECT MAPHIEU,KHACHHANG.MAKH,TENKH,MANV,NGAYNHAP,TRANGTHAI FROM dbo.PHIEUYC INNER JOIN dbo.KHACHHANG ON KHACHHANG.MAKH = PHIEUYC.MAKH WHERE NGAYNHAP like '%" + txtTimKiem.Text.Trim() + "%' and TRANGTHAI=N'Chưa thanh toán' ");
             }
         }
 
-        private void btnThemCT_Click(object sender, EventArgs e)
+        private void btnHuy_Click_1(object sender, EventArgs e)
         {
-            fluu = -1;
-            DisEnlCT(true);
-            txtMaKH.Enabled = false;
-            txtMaNV.Enabled = false;
-            dtNgayNhap.Enabled = false;
-            btnThem.Enabled = false;
-            btnSua.Enabled = false;
-            btnXoa.Enabled = false;
-            btnLuu.Enabled = false;
-              
-            txtMaPhieu.Enabled = false;
-            txt_MaPhieu.Enabled = false;
-        }
-
-        private void btnLuuCT_Click(object sender, EventArgs e)
-        {
-            if (txt_MaPhieu.Text == "")
+            DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn hủy thao tác đang làm?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
             {
-                MessageBox.Show("Bạn chưa nhập mã phiếu yêu cầu! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                HienThi();
+                DisEnl(false);
+                fluu = 1;
+
             }
-            if (cbMonAn.Text == "")
+            else
+                return;
+        }
+
+        private void btnGoiMon_Click(object sender, EventArgs e)
+        {
+            if(txtMaPhieu.Text=="")
             {
-                MessageBox.Show("Bạn chưa nhập mã món! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            if (txtSoLuong.Text == "")
+                MessageBox.Show("Bạn chưa chọn mã phiếu! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else
             {
-                MessageBox.Show("Bạn chưa nhập số lượng! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            int _soLuong;
-            int.TryParse(txtSoLuong.Text, out _soLuong);
-
-
-            CT.MAPHIEU = txt_MaPhieu.Text;
-            CT.MAMON = cbMonAn.Text;
-            CT.SOLUONG =_soLuong ;
-
-
-            if (txtMaPhieu.Text != "" && cbMonAn.Text != "" && txtSoLuong.Text != "" && fluu == -1)
-            {
-                try
-                {
-                    Bus.InsertDataCT(CT);
-                    MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    HienThiCT();
-                    frmPhieuYC_Load(sender, e);
-                    clearData();
-                    DisEnl(false);
-                    fluu = 22;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi" + ex.Message);
-                }
-            }
-            else if (txtMaPhieu.Text != "" && cbMonAn.Text != "" && txtSoLuong.Text != "" && fluu !=-1)
-            {
-                try
-                {
-                    Bus.UpdateDataCT(CT);
-                    MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    HienThiCT();
-                    frmPhieuYC_Load(sender, e);
-                    clearData();
-                    DisEnl(false);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi" + ex.Message);
-                }
-            }
-
+                this.Hide();
+                frmChiTietPhieuYC CT = new frmChiTietPhieuYC(txtMaPhieu.Text);
+                CT.ShowDialog();
+                this.Show();
+            }        
         }
 
-        private void dgvChiTietPYC_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        private void btnXuatFile_Click(object sender, EventArgs e)
         {
-            dgvChiTietPYC.Rows[e.RowIndex].Cells["_STT"].Value = e.RowIndex + 1;
+            files.ExportToExcel(dgvPhieuYeuCau);
         }
 
-        private void btnSuaCT_Click(object sender, EventArgs e)
-        {
-            fluu = 2;
-            DisEnl(true);
-            DisEnlCT(true);
-            btnLamMoi.Enabled = false;
-            btnLuu.Enabled = false;
-            txtMaPhieu.Enabled = false;
-            txt_MaPhieu.Enabled = false;
-            
-        }
+        /// <summary>
+        /// CHi tiet phieu yeu cau
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
-        private void HienThiCT()
-        {
-            dgvChiTietPYC.DataSource = Bus.DataCTYC("SELECT CHITIETPHIEUYC.MAPHIEU,MONAN.TENMON,SOLUONG, THANHTIEN=(SOLUONG*GIA) FROM dbo.CHITIETPHIEUYC INNER JOIN dbo.PHIEUYC ON PHIEUYC.MAPHIEU = CHITIETPHIEUYC.MAPHIEU INNER JOIN dbo.MONAN ON MONAN.MAMON = CHITIETPHIEUYC.MAMON AND CHITIETPHIEUYC.MAPHIEU='" + txt_MaPhieu.Text.Trim() + "'");
-        }
-        
 
-        private void btnThanhToan_Click(object sender, EventArgs e)
-        {
-            frmThanhToan ThanhToan = new frmThanhToan(txt_MaPhieu.Text);
-            ThanhToan.ShowDialog();
-        }
 
-        private void btnCT_Click(object sender, EventArgs e)
-        {
-            HienThiCT();
-            btnThanhToan.Enabled = true;
-            btnHuy.Enabled = true;
-        }
-
-        private void btnDSCT_Click(object sender, EventArgs e)
-        {
-            dgvChiTietPYC.DataSource = Bus.DataCTYC("SELECT CHITIETPHIEUYC.MAPHIEU,MONAN.TENMON,SOLUONG, THANHTIEN=(SOLUONG*GIA) FROM dbo.CHITIETPHIEUYC INNER JOIN dbo.PHIEUYC ON PHIEUYC.MAPHIEU = CHITIETPHIEUYC.MAPHIEU INNER JOIN dbo.MONAN ON MONAN.MAMON = CHITIETPHIEUYC.MAMON");
-            btnHuy.Enabled = true;
-        }
     }
 }

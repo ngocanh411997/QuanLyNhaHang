@@ -54,14 +54,33 @@ namespace QuanLyNhaHang.BUS
         {
             return da.UpdateDataCT(CTPYC);
         }
-        public int DeleteDataCT(string ID)
+        public int DeleteDataCT(string IDMP,string IDMM)
         {
-            return da.DeleteData(ID);
+            return da.DeleteDataCT(IDMP,IDMM);
         }
         public DataTable GetListMonAn()
         {
             return da.GetListMonAn();
         }
-
+        ///
+        public int UpdateDataTT(PhieuYeuCau PYC)
+        {
+            return da.UpdateDataTT(PYC);
+        }
+        //
+        public DataTable GetDataHoaDonTT()
+        {
+            return da.GetDataHoaDonTT();
+        }
+        //
+        public DataTable GetListNV()
+        {
+            return da.GetListNV();
+        }
+        // Doanh thu
+        public DataTable DTNgay()
+        {
+            return da.DTNgay();
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnHoaDonTT = new System.Windows.Forms.Button();
             this.btnPhieuNhap = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnBoPhan = new System.Windows.Forms.Button();
@@ -69,6 +70,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnHoaDonTT);
             this.groupBox2.Controls.Add(this.btnPhieuNhap);
             this.groupBox2.Controls.Add(this.btnNhanVien);
             this.groupBox2.Controls.Add(this.btnBoPhan);
@@ -78,6 +80,21 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quản Lý Nội Bộ";
+            // 
+            // btnHoaDonTT
+            // 
+            this.btnHoaDonTT.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnHoaDonTT.Image = ((System.Drawing.Image)(resources.GetObject("btnHoaDonTT.Image")));
+            this.btnHoaDonTT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnHoaDonTT.Location = new System.Drawing.Point(17, 154);
+            this.btnHoaDonTT.Name = "btnHoaDonTT";
+            this.btnHoaDonTT.Size = new System.Drawing.Size(76, 92);
+            this.btnHoaDonTT.TabIndex = 4;
+            this.btnHoaDonTT.Text = "Hóa đơn đã thanh toán";
+            this.btnHoaDonTT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHoaDonTT.UseVisualStyleBackColor = true;
+            this.btnHoaDonTT.UseWaitCursor = true;
+            this.btnHoaDonTT.Click += new System.EventHandler(this.btnHoaDonTT_Click);
             // 
             // btnPhieuNhap
             // 
@@ -233,6 +250,8 @@
             this.Name = "frmQuanLyChung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLyChung";
+//            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQuanLyChung_FormClosed);
+//            this.Load += new System.EventHandler(this.frmQuanLyChung_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -255,5 +274,6 @@
         private System.Windows.Forms.Button btnNhomMon;
         private System.Windows.Forms.Button btnMon;
         private System.Windows.Forms.Button btnKhachHang;
+        private System.Windows.Forms.Button btnHoaDonTT;
     }
 }

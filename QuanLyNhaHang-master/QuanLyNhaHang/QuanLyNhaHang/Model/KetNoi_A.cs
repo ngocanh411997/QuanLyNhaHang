@@ -5,8 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
-namespace QuanLyNhaHang.model
+namespace QuanLyNhaHang.Model
 {
     public class KetNoi_A
     {
@@ -86,13 +87,37 @@ namespace QuanLyNhaHang.model
             {
                 cmd.Parameters.AddRange(para);
             }
-            cmd.Connection = conn;
-            conn.Open();
-            int count = cmd.ExecuteNonQuery();
-            conn.Close();
-            return count;
+                cmd.Connection = conn;
+                conn.Open();
+                int count = cmd.ExecuteNonQuery();
+                conn.Close();
+                return count;          
         }
-      
+        public DataSet HD1 (string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new System.Data.DataSet();
+            da.Fill(ds, "DATAS");
+            return ds;         
+        }
+        public DataSet HD2(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
+        public DataSet HD3(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
+
     }
 }
 

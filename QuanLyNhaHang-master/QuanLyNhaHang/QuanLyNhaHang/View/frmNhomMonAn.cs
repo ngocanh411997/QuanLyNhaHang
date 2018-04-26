@@ -40,6 +40,7 @@ namespace QuanLyNhaHang.git
         private void HienThi()
         {
             dgvNhomMonAn.DataSource = Bus.GetDataProc();
+            dgvNhomMonAn.AutoResizeColumns();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -47,9 +48,8 @@ namespace QuanLyNhaHang.git
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                frmQuanLyChung QL = new frmQuanLyChung();
-                QL.Show();
-                this.Close();
+                
+                this.Hide();
             }
             else
                 HienThi();

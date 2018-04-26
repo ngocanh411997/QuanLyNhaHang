@@ -33,6 +33,9 @@
             this.txtMaNhom = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvNhomMonAn = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MANHOMMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENNHOMMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -45,14 +48,11 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnLamTrong = new System.Windows.Forms.Button();
             this.cbTimKiem = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLamTrong = new System.Windows.Forms.Button();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MANHOMMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENNHOMMON = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhomMonAn)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -90,19 +90,38 @@
             this.STT,
             this.MANHOMMON,
             this.TENNHOMMON});
-            this.dgvNhomMonAn.Location = new System.Drawing.Point(16, 27);
+            this.dgvNhomMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNhomMonAn.Location = new System.Drawing.Point(3, 16);
             this.dgvNhomMonAn.Name = "dgvNhomMonAn";
-            this.dgvNhomMonAn.Size = new System.Drawing.Size(344, 295);
+            this.dgvNhomMonAn.Size = new System.Drawing.Size(344, 316);
             this.dgvNhomMonAn.TabIndex = 0;
             this.dgvNhomMonAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhomMonAn_CellClick);
             this.dgvNhomMonAn.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvNhomMonAn_RowPrePaint);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MANHOMMON
+            // 
+            this.MANHOMMON.DataPropertyName = "MANHOMMON";
+            this.MANHOMMON.HeaderText = "Mã Nhóm";
+            this.MANHOMMON.Name = "MANHOMMON";
+            // 
+            // TENNHOMMON
+            // 
+            this.TENNHOMMON.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TENNHOMMON.DataPropertyName = "TENNHOMMON";
+            this.TENNHOMMON.HeaderText = "Tên Nhóm";
+            this.TENNHOMMON.Name = "TENNHOMMON";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvNhomMonAn);
             this.groupBox2.Location = new System.Drawing.Point(378, 75);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(379, 335);
+            this.groupBox2.Size = new System.Drawing.Size(350, 335);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Nhóm Món Ăn";
@@ -248,6 +267,19 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm Kiếm";
             // 
+            // btnLamTrong
+            // 
+            this.btnLamTrong.Image = ((System.Drawing.Image)(resources.GetObject("btnLamTrong.Image")));
+            this.btnLamTrong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamTrong.Location = new System.Drawing.Point(254, 19);
+            this.btnLamTrong.Name = "btnLamTrong";
+            this.btnLamTrong.Size = new System.Drawing.Size(86, 25);
+            this.btnLamTrong.TabIndex = 4;
+            this.btnLamTrong.Text = "Làm Trống";
+            this.btnLamTrong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLamTrong.UseVisualStyleBackColor = true;
+            this.btnLamTrong.Click += new System.EventHandler(this.btnLamTrong_Click);
+            // 
             // cbTimKiem
             // 
             this.cbTimKiem.FormattingEnabled = true;
@@ -292,47 +324,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Nhóm Món Ăn";
             // 
-            // btnLamTrong
-            // 
-            this.btnLamTrong.Image = ((System.Drawing.Image)(resources.GetObject("btnLamTrong.Image")));
-            this.btnLamTrong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLamTrong.Location = new System.Drawing.Point(254, 19);
-            this.btnLamTrong.Name = "btnLamTrong";
-            this.btnLamTrong.Size = new System.Drawing.Size(86, 25);
-            this.btnLamTrong.TabIndex = 4;
-            this.btnLamTrong.Text = "Làm Trống";
-            this.btnLamTrong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLamTrong.UseVisualStyleBackColor = true;
-            this.btnLamTrong.Click += new System.EventHandler(this.btnLamTrong_Click);
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MANHOMMON
-            // 
-            this.MANHOMMON.DataPropertyName = "MANHOMMON";
-            this.MANHOMMON.HeaderText = "Mã Nhóm";
-            this.MANHOMMON.Name = "MANHOMMON";
-            // 
-            // TENNHOMMON
-            // 
-            this.TENNHOMMON.DataPropertyName = "TENNHOMMON";
-            this.TENNHOMMON.HeaderText = "Tên Nhóm";
-            this.TENNHOMMON.Name = "TENNHOMMON";
-            // 
             // frmNhomMonAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 428);
+            this.ClientSize = new System.Drawing.Size(742, 428);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmNhomMonAn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmNhomMonAn";
             this.Load += new System.EventHandler(this.frmNhomMonAn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhomMonAn)).EndInit();

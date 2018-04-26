@@ -12,6 +12,7 @@ namespace QuanLyNhaHang.Model
         public string MAKH { get; set; }
         public string MANV { get; set; }
         public DateTime NGAYNHAP { get; set; }
+        public string TRANGTHAI { get; set; }
 
         //
         public string TENKH { get; set; }
@@ -23,14 +24,16 @@ namespace QuanLyNhaHang.Model
             MANV = "";
             NGAYNHAP = DateTime.Parse("01/01/2017");
             TENKH = "";
+            TRANGTHAI = "";
         }
-        public PhieuYeuCau(string _MAPHIEU, string _MAKH, string _MANV, DateTime _NGAYNHAP, string _TENKH)
+        public PhieuYeuCau(string _MAPHIEU, string _MAKH, string _MANV, DateTime _NGAYNHAP, string _TENKH,string _TRANGTHAI)
         {
             MAPHIEU = _MAPHIEU;
             MAKH = _MAKH;
             MANV = _MANV;
             NGAYNHAP = _NGAYNHAP;
             TENKH = _TENKH;
+            TRANGTHAI = _TRANGTHAI;
         }
     }
 }

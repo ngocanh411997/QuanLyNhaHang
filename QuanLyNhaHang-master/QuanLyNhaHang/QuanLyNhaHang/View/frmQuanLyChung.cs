@@ -21,10 +21,10 @@ namespace QuanLyNhaHang.view
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            frmKhachHang fm = new frmKhachHang();
-            this.Hide();
-            fm.ShowDialog();
-            this.Show();
+            //frmKhachHang fm = new frmKhachHang();
+            //this.Hide();
+            //fm.ShowDialog();
+            //this.Show();
         }
 
         private void btnMon_Click(object sender, EventArgs e)
@@ -37,10 +37,10 @@ namespace QuanLyNhaHang.view
 
         private void btnNhaCC_Click(object sender, EventArgs e)
         {
-            frmNhaCungCap frm = new frmNhaCungCap();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            //frmNhaCungCap frm = new frmNhaCungCap();
+            //this.Hide();
+            //frm.ShowDialog();
+            //this.Show();
         }
 
         private void btnPhieuYC_Click(object sender, EventArgs e)
@@ -53,49 +53,67 @@ namespace QuanLyNhaHang.view
 
         private void btnBan_Click(object sender, EventArgs e)
         {
-            frmBan frm = new frmBan();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            //frmBan frm = new frmBan();
+            //this.Hide();
+            //frm.ShowDialog();
+            //this.Show();
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            frmNhanVien frm = new frmNhanVien();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            //frmNhanVien frm = new frmNhanVien();
+            //this.Hide();
+            //frm.ShowDialog();
+            //this.Show();
         }
 
         private void btnPhieuNhap_Click(object sender, EventArgs e)
         {
-            frmHoaDonNhap frm = new frmHoaDonNhap();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            //frmHoaDonNhap frm = new frmHoaDonNhap();
+            //this.Hide();
+            //frm.ShowDialog();
+            //this.Show();
         }
 
         private void btnBoPhan_Click(object sender, EventArgs e)
         {
-            frmBoPhan frm = new frmBoPhan();
-            this.Close();
-            frm.ShowDialog();
-            this.Show();
+            //frmBoPhan frm = new frmBoPhan();
+            //this.Hide();
+            //frm.ShowDialog();
+            //this.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmMain Main = new frmMain();
-            this.Close();
-            Main.ShowDialog();
+            DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+                this.Show();
         }
 
         private void btnNhomMon_Click(object sender, EventArgs e)
         {
-            frmNhomMonAn NhomMon = new frmNhomMonAn();
             this.Hide();
+            frmNhomMonAn NhomMon = new frmNhomMonAn();
             NhomMon.ShowDialog();
+            this.Show();
             
         }
+
+        private void btnHoaDonTT_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmHoaDonDaThanhToan HDTT = new frmHoaDonDaThanhToan();
+            HDTT.ShowDialog();
+            this.Show();
+        }
+
+        //private void frmQuanLyChung_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    Application.Exit();
+        //}
     }
 }

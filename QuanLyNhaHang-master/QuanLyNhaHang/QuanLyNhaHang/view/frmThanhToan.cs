@@ -29,7 +29,7 @@ namespace QuanLyNhaHang.view
         {
             txtMaPhieu.Text = MaPhieu;
             txtMaPhieu.Enabled = false;
-            dgvThanhToan.DataSource = Bus.GetDataThanhToan("SELECT A.MAPHIEU,TENKH,SUM(A.THANHTIEN) AS THANHTOAN FROM dbo.KHACHHANG, (SELECT CHITIETPHIEUYC.MAPHIEU, MAKH, CHITIETPHIEUYC.MAMON, SOLUONG, THANHTIEN = (SOLUONG * GIA) FROM dbo.CHITIETPHIEUYC INNER JOIN dbo.PHIEUYC ON PHIEUYC.MAPHIEU = CHITIETPHIEUYC.MAPHIEU INNER JOIN dbo.MONAN ON MONAN.MAMON = CHITIETPHIEUYC.MAMON AND CHITIETPHIEUYC.MAPHIEU = '"+txtMaPhieu.Text+"') A WHERE A.MAKH = KHACHHANG.MAKH GROUP BY A.MAPHIEU,TENKH");           
+            dgvThanhToan.DataSource = Bus.GetDataThanhToan("SELECT CHITIETPHIEUYC.MAPHIEU,TENKH, SUM(THANHTIEN) AS TONGTIEN FROM dbo.CHITIETPHIEUYC INNER JOIN dbo.PHIEUYC ON PHIEUYC.MAPHIEU = CHITIETPHIEUYC.MAPHIEU INNER JOIN dbo.KHACHHANG ON KHACHHANG.MAKH = PHIEUYC.MAKH WHERE CHITIETPHIEUYC.MAPHIEU = '"+txtMaPhieu.Text+"' GROUP BY CHITIETPHIEUYC.MAPHIEU, TENKH");           
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -37,8 +37,6 @@ namespace QuanLyNhaHang.view
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                frmQuanLyChung QL = new frmQuanLyChung();
-                QL.Show();
                 this.Close();
             }
             else
@@ -53,6 +51,17 @@ namespace QuanLyNhaHang.view
         private void dgvThanhToan_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             dgvThanhToan.Rows[e.RowIndex].Cells["STT"].Value = e.RowIndex + 1;
+        }
+
+        private void btnXuatHD_Click(object sender, EventArgs e)
+        {
+            obj.MAPHIEU = txtMaPhieu.Text;
+            Bus.UpdateDataTT(obj);
+            MessageBox.Show("Xuất hóa đơn thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+            InHoaDon HD = new InHoaDon(txtMaPhieu.Text);
+            HD.ShowDialog();
+            this.Show();
         }
     }
 }

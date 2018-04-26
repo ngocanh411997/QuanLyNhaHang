@@ -28,7 +28,8 @@ namespace QuanLyNhaHang.controller
                 new SqlParameter("MAPHIEU",PYC.MAPHIEU),
                 new SqlParameter("MAKH",PYC.MAKH),
                 new SqlParameter("MANV",PYC.MANV),
-                new SqlParameter("NGAYNHAP",PYC.NGAYNHAP)       
+                new SqlParameter("NGAYNHAP",PYC.NGAYNHAP),
+                new SqlParameter("TRANGTHAI",PYC.TRANGTHAI)
             };
             return conn.ExcuteSQL("ThemPYC", para);
         }
@@ -39,7 +40,8 @@ namespace QuanLyNhaHang.controller
                 new SqlParameter("MAPHIEU",PYC.MAPHIEU),
                 new SqlParameter("MAKH",PYC.MAKH),
                 new SqlParameter("MANV",PYC.MANV),
-                new SqlParameter("NGAYNHAP",PYC.NGAYNHAP)
+                new SqlParameter("NGAYNHAP",PYC.NGAYNHAP),
+                new SqlParameter("TRANGTHAI",PYC.TRANGTHAI)
             };
             return conn.ExcuteSQL("SuaPYC", para);
         }
@@ -71,8 +73,10 @@ namespace QuanLyNhaHang.controller
             {
                 new SqlParameter("MAPHIEU",CTPYC.MAPHIEU),
                 new SqlParameter("MAMON",CTPYC.MAMON),
-                new SqlParameter("SOLUONG",CTPYC.SOLUONG)
-              
+                new SqlParameter("SOLUONG",CTPYC.SOLUONG),
+                new SqlParameter("GIA",CTPYC.GIA),
+                new SqlParameter("THANHTIEN",CTPYC.THANHTIEN)
+
             };
             return conn.ExcuteSQL("ThemCTPYC", para);
         }
@@ -82,15 +86,19 @@ namespace QuanLyNhaHang.controller
            {
                new SqlParameter("MAPHIEU",CTPYC.MAPHIEU),
                 new SqlParameter("MAMON",CTPYC.MAMON),
-                new SqlParameter("SOLUONG",CTPYC.SOLUONG)
+                new SqlParameter("SOLUONG",CTPYC.SOLUONG),
+                new SqlParameter("GIA",CTPYC.GIA),
+                new SqlParameter("THANHTIEN",CTPYC.THANHTIEN)
             };
             return conn.ExcuteSQL("SuaCTPYC", para);
         }
-        public int DeleteDataCT(string ID)
+        public int DeleteDataCT(string IDMP, string IDMM)
         {
             SqlParameter[] para =
             {
-                new SqlParameter("MAPHIEU",ID)
+                new SqlParameter("MAPHIEU",IDMP),
+                new SqlParameter("MAMON",IDMM)
+
         };
             return conn.ExcuteSQL("XoaCTPYC", para);
         }
@@ -98,5 +106,37 @@ namespace QuanLyNhaHang.controller
         {
             return conn.GetDataProc("MA_SelectAll ", null);
         }
+        /// <summary>
+        /// Sau khi thanh toán, trạng thái hóa đơn chuyển từ chưa thanh toán sang đã thanh toán
+        /// </summary>
+        /// <param name="PYC"></param>
+        /// <returns></returns>
+        public int UpdateDataTT(PhieuYeuCau PYC)
+        {
+            SqlParameter[] para =
+           {
+               new SqlParameter("MAPHIEU",PYC.MAPHIEU),
+                new SqlParameter("TRANGTHAI",PYC.TRANGTHAI)
+            };
+            return conn.ExcuteSQL("DaTT", para);
+        }
+        // Quản lý hóa đơn đã thanh toán
+        public DataTable GetDataHoaDonTT()
+        {
+            return conn.GetDataProc("HoaDonDaTT", null);
+        }
+
+        ///
+        public DataTable GetListNV()
+        {
+            return conn.GetDataStr("Select * FROM dbo.NHANVIEN where MABP Like 'BP03'");
+        }
+        // Doanh thu
+        public DataTable DTNgay()
+        {
+            return conn.GetDataProc("DTNgay", null);
+        }
+
+
     }
 }

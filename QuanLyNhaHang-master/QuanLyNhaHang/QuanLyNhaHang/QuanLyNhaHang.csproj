@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuanLyNhaHang</RootNamespace>
     <AssemblyName>QuanLyNhaHang</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +34,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,23 +81,49 @@
     <Compile Include="BUS\MonAnBUS.cs" />
     <Compile Include="BUS\NhomMonAnBUS.cs" />
     <Compile Include="BUS\PhieuYeuCauBUS.cs" />
-    <Compile Include="controller\BoPhanCrt.cs" />
-    <Compile Include="controller\Helper.cs" />
     <Compile Include="controller\MonAnController.cs" />
-    <Compile Include="controller\NguoiDungCrt.cs" />
-    <Compile Include="controller\NhanVienCrt.cs" />
     <Compile Include="controller\NhomMonAnController.cs" />
     <Compile Include="controller\PhieuYeuCauController.cs" />
+    <Compile Include="DataSetHoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\files.cs" />
+    <Compile Include="view\frmDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmDoanhThu.Designer.cs">
+      <DependentUpon>frmDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\InHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\InHoaDon.Designer.cs">
+      <DependentUpon>InHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ChiTietPhieuYeuCau.cs" />
+    <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\KetNoi_A.cs" />
     <Compile Include="Model\MonAn.cs" />
     <Compile Include="Model\NhomMonAn.cs" />
     <Compile Include="Model\PhieuYeuCau.cs" />
-    <Compile Include="view\frmHoaDonNhap.cs">
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmChiTietPhieuYC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\frmHoaDonNhap.Designer.cs">
-      <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
+    <Compile Include="view\frmChiTietPhieuYC.Designer.cs">
+      <DependentUpon>frmChiTietPhieuYC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmHoaDonDaThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmHoaDonDaThanhToan.Designer.cs">
+      <DependentUpon>frmHoaDonDaThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="view\frmNhomMonAn.cs">
       <SubType>Form</SubType>
@@ -73,37 +131,8 @@
     <Compile Include="view\frmNhomMonAn.Designer.cs">
       <DependentUpon>frmNhomMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ConnectString.cs" />
-    <Compile Include="Model\ketnoi.cs" />
-    <Compile Include="Model\NguoiDung.cs" />
-    <Compile Include="Model\NhanVien.cs" />
-    <Compile Include="Model\SingletonData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="view\frmBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\frmBan.Designer.cs">
-      <DependentUpon>frmBan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\frmBoPhan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\frmBoPhan.Designer.cs">
-      <DependentUpon>frmBoPhan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\frmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\frmDangNhap.Designer.cs">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\frmKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\frmKhachHang.Designer.cs">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="view\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,18 +144,6 @@
     </Compile>
     <Compile Include="view\frmMonAn.Designer.cs">
       <DependentUpon>frmMonAn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\frmNhaCungCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\frmNhaCungCap.Designer.cs">
-      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="view\frmNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="view\frmNhanVien.Designer.cs">
-      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="view\frmPhieuYC.cs">
       <SubType>Form</SubType>
@@ -146,8 +163,33 @@
     <Compile Include="view\frmThanhToan.Designer.cs">
       <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="view\frmHoaDonNhap.resx">
-      <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
+    <Compile Include="view\HoaDon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\frmDoanhThu.resx">
+      <DependentUpon>frmDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\InHoaDon.resx">
+      <DependentUpon>InHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="view\frmChiTietPhieuYC.resx">
+      <DependentUpon>frmChiTietPhieuYC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmHoaDonDaThanhToan.resx">
+      <DependentUpon>frmHoaDonDaThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmNhomMonAn.resx">
       <DependentUpon>frmNhomMonAn.cs</DependentUpon>
@@ -160,30 +202,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="view\frmBan.resx">
-      <DependentUpon>frmBan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\frmBoPhan.resx">
-      <DependentUpon>frmBoPhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\frmDangNhap.resx">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\frmKhachHang.resx">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="view\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmMonAn.resx">
       <DependentUpon>frmMonAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\frmNhaCungCap.resx">
-      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="view\frmNhanVien.resx">
-      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\frmPhieuYC.resx">
       <DependentUpon>frmPhieuYC.cs</DependentUpon>
@@ -194,6 +219,26 @@
     <EmbeddedResource Include="view\frmThanhToan.resx">
       <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\HoaDon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSetHoaDon.xsc">
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHoaDon.xss">
+      <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -207,7 +252,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

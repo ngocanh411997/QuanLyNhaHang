@@ -1,4 +1,5 @@
 ﻿using QuanLyNhaHang.BUS;
+using QuanLyNhaHang.Helper;
 using QuanLyNhaHang.model;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,7 @@ namespace QuanLyNhaHang.view
         private void HienThi()
         {
             dgvMonAn.DataSource = Bus.GetDataProc();
+            dgvMonAn.AutoResizeColumns();
         }
 
 
@@ -64,9 +66,8 @@ namespace QuanLyNhaHang.view
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                frmMain m = new frmMain();
-                m.Show();
-                this.Close();
+                
+                this.Hide();
             }
             else
                 HienThi();
@@ -249,6 +250,11 @@ namespace QuanLyNhaHang.view
             {
                 dgvMonAn.DataSource = Bus.TimKiemMA("SELECT MAMON,TENNHOMMON,TENMON,DONVITINH,GIA FROM dbo.MONAN INNER JOIN dbo.NHOMMONAN ON NHOMMONAN.MANHOMMON = MONAN.MANHOMMON AND GIA like '%" + txtTimKiem.Text.Trim() + "%'");
             }
+        }
+
+        private void btnXuatFile_Click(object sender, EventArgs e)
+        {
+            files.ExportToExcel(dgvMonAn);
         }
     }
 }
